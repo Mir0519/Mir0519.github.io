@@ -30,19 +30,17 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Assignments</a></li>
                         <li class="nav-item"><a class="nav-link" href="Conversion.html">Conversion</a></li>
                         <li class="nav-item"><a class="nav-link" href="Income%20Tax%20Calculator.html">Income Tax Calculator</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Factorial.html">Factorial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Factorial.html">Number Calculator</a></li>
                         <li class="nav-item"><a class="nav-link" href="Simple%20Pay%20Roll.html">Simple Payroll</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Introduction to Computing</div>
-               MIRKYLA GRACE <div class="masthead-heading text-uppercase">NICOLAS</div>
-                
-            </div>
+       <body style="background-color: skyblue;">
+  <h1></h1>
+</body>
+
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
@@ -52,40 +50,69 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
+            <div class="container">
                         
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="190"
-  height="67"
-  viewBox="0 0 27 27"
-  fill="blue"
->
-  <path d="M10 3a3 3 0 0 1 3 3v7.965l.075 .056a5 5 0 0 1 1.81 5.01l-.055 .227a5 5 0 1 1 -7.905 -5.237l.075 -.056v-7.965a3 3 0 0 1 2.824 -2.995zm9 3a1 1 0 0 1 1 1v2h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1 -2 0v-2h-2a1 1 0 0 1 0 -2h2v-2a1 1 0 0 1 1 -1m-9 -1a1 1 0 0 0 -1 1v4h2v-4a1 1 0 0 0 -1 -1" />
-</svg>
-                        </span>
-                        <h4 class="my-3">#1 Conversion</h4>
-                        <p class="text-muted">Computes Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="148"
-  height="77"
-  viewBox="0 0 24 24"
-  fill="currentColor"
->
-  
-                 
-        </div>
-                        <p > </p>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+
+
+ 
+  </style>
+</head>
+<body>
+  <div class="converter">
+    <h4 class="my-3">Unit Converter</h4>
+
+    <input type="number" id="inputValue" placeholder="Enter a number">
+<style>
+  input, select, button {
+    display: block;      /* makes them stack vertically */
+    margin: 10px 0;      /* adds 10px space above and below each element */
+    padding: 8px;
+  }
+
+  .result {
+    margin-top: 15px;    /* space above the result box */
+  }
+</style>
+
+    <select id="conversionType">
+      <option value="cToF">Celsius → Fahrenheit</option>
+      <option value="fToC">Fahrenheit → Celsius</option>
+      <option value="mToFt">Meters → Feet</option>
+      <option value="ftToM">Feet → Meters</option>
+    </select>
+
+    <button onclick="convert()">Convert</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function convert() {
+      const value = parseFloat(document.getElementById('inputValue').value);
+      const type = document.getElementById('conversionType').value;
+      let resultText = '';
+
+      if (isNaN(value)) {
+        resultText = "Please enter a valid number.";
+      } else {
+        switch (type) {
+          case 'cToF':
+            resultText = `${value}°C = ${(value * 9/5 + 32).toFixed(2)}°F`;
+            break;
+          case 'fToC':
+            resultText = `${value}°F = ${((value - 32) * 5/9).toFixed(2)}°C`;
+            break;
+          case 'mToFt':
+            resultText = `${value} meters = ${(value * 3.28084).toFixed(2)} feet`;
+            break;
+          case 'ftToM':
+            resultText = `${value} feet = ${(value / 3.28084).toFixed(2)} meters`;
+            break;
+        }
+      }
+
+      document.getElementById('result').textContent = resultText;
+    }
+  </script>
+</body>
 </html>

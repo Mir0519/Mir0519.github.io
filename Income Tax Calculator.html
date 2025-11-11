@@ -30,20 +30,17 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Assignments</a></li>
                         <li class="nav-item"><a class="nav-link" href="Conversion.html">Conversion</a></li>
                         <li class="nav-item"><a class="nav-link" href="Income%20Tax%20Calculator.html">Income Tax Calculator</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Factorial.html">Factorial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Factorial.html">Number Calculator</a></li>
                         <li class="nav-item"><a class="nav-link" href="Simple%20Pay%20Roll.html">Simple Payroll</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Introduction to Computing</div>
-               MIRKYLA GRACE <div class="masthead-heading text-uppercase">NICOLAS</div>
-                
-            </div>
-        </header>
+        <body style="background-color: darkseagreen;">
+  <h1></h1>
+</body>
+
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
@@ -54,31 +51,156 @@
                     <div class="col-md-4">
     <svg
          
- xmlns="http://www.w3.org/2000/svg"
-  width="148"
-  height="77"
-  viewBox="0 0 24 24"
-  fill="green"
->
-  <path d="M18 2a3 3 0 0 1 3 3v14a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-14a3 3 0 0 1 3 -3zm-10 15a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm-8 -4a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm-1 -7h-6a2 2 0 0 0 -2 2v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-1a2 2 0 0 0 -2 -2z" />
-</svg>
-                    
-                        
-                        <h4 class="my-3">#2 Income Tax Calculator</h4>
-                        <p class="text-muted">Computes the tax of a Filipino's income.</p>
-                    </div>
-                <div class="col-md-4">
-                         <svg
+ 
+                
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
+    .calculator {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 340px;
+      text-align: center;
+    }
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0078ff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #005ec0;
+    }
+
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #f1f3f6;
+    }
+
+    .highlight {
+      background-color: #cce5ff;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 15px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 6px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0078ff;
+      color: white;
+    }
+ 
+<body>
+  <div class="calculator">
+    <h2>PH Income Tax Calculator</h2>
+<style>
+  input, select, button {
+    display: block;      /* makes them stack vertically */
+    margin: 10px 0;      /* adds 10px space above and below each element */
+    padding: 8px;
+  }
+
+  .result {
+    margin-top: 15px;    /* space above the result box */
+  }
+</style>
+
+    <input type="number" id="income" placeholder="Enter annual income (₱)">
+    <button onclick="calculateTax()">Compute</button>
+
+    <div class="result" id="result"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Income Bracket (₱)</th>
+          <th>Tax Rate</th>
+        </tr>
+      </thead>
+      <tbody id="bracketTable">
+        <tr><td>0 - 250,000</td><td>0%</td></tr>
+        <tr><td>250,001 - 400,000</td><td>15%</td></tr>
+        <tr><td>400,001 - 800,000</td><td>20%</td></tr>
+        <tr><td>800,001 - 2,000,000</td><td>25%</td></tr>
+        <tr><td>2,000,001 - 8,000,000</td><td>30%</td></tr>
+        <tr><td>Over 8,000,000</td><td>35%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function calculateTax() {
+      const income = parseFloat(document.getElementById('income').value);
+      const resultDiv = document.getElementById('result');
+      const rows = document.querySelectorAll('#bracketTable tr');
+      rows.forEach(r => r.classList.remove('highlight'));
+
+      if (isNaN(income) || income < 0) {
+        resultDiv.innerHTML = "Please enter a valid income.";
+        return;
+      }
+
+      let tax = 0, rate = 0, baseTax = 0, index = 0;
+
+      if (income <= 250000) {
+        rate = 0; tax = 0; index = 0;
+      } else if (income <= 400000) {
+        rate = 15; tax = (income - 250000) * 0.15; index = 1;
+      } else if (income <= 800000) {
+        rate = 20; baseTax = 22500; tax = baseTax + (income - 400000) * 0.20; index = 2;
+      } else if (income <= 2000000) {
+        rate = 25; baseTax = 102500; tax = baseTax + (income - 800000) * 0.25; index = 3;
+      } else if (income <= 8000000) {
+        rate = 30; baseTax = 402500; tax = baseTax + (income - 2000000) * 0.30; index = 4;
+      } else {
+        rate = 35; baseTax = 2202500; tax = baseTax + (income - 8000000) * 0.35; index = 5;
+      }
+
+      rows[index].classList.add('highlight');
+
+      resultDiv.innerHTML = `
+        <p><strong>Annual Income:</strong> ₱${income.toLocaleString()}</p>
+        <p><strong>Bracket:</strong> ${rows[index].cells[0].textContent}</p>
+        <p><strong>Tax Rate:</strong> ${rate}%</p>
+        <p><strong>Tax Due:</strong> ₱${tax.toLocaleString(undefined, {maximumFractionDigits: 2})}</p>
+      `;
+    }
+  </script>
+</body>
 </html>
